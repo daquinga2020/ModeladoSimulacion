@@ -1,0 +1,28 @@
+MODULE Module1
+	PERS tooldata tool1:=[TRUE,[[0,0,110],[1,0,0,0]],[0.1,[0,0,10],[1,0,0,0],0,0,0]];
+	PERS tooldata soldador4p:=[TRUE,[[-1.06594E-5,-2.05014E-5,110],[1,0,0,0]],[0.1,[0,0,0],[1,0,0,0],0,0,0]];
+    !***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: a.cobo.2020
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+        !Añada aquí su código
+    ENDPROC
+ENDMODULE

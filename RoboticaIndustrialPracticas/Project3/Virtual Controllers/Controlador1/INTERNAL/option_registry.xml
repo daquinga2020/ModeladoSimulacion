@@ -1,0 +1,4 @@
+<?xml version = "1.0" encoding="utf-8" ?>
+<option_registry xmlns="urn:abb-robotics-registry-option">
+<entry option="TRACK" path="C:/Users/a.cobo.2020/AppData/Local/ABB/RobotWare/TrackMotion_6.13.2015"/>
+</option_registry>

@@ -1,0 +1,65 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.38823909219377845 0.3834472114619278 0.8379968038809111 1.7737397564257142
+  position -0.09340879022106088 -1.1641024679535672 1.147597024891172
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorTileSize 0.6 0.6
+}
+WoodenBox {
+  translation 0.0824303 0.110643 0.05
+  name "wooden box(4)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.142228 0.124983 0.05
+  name "wooden box(3)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 2405.2900681575065
+  hidden position_0_1 2525.5830208566113
+  hidden linearVelocity_0 9.661498710649484e-05 -0.00014127633024712242 -0.0004035143990873776
+  hidden angularVelocity_0 0.008699106896774625 0.006451926870856489 -0.00891110428108366
+  hidden rotation_1 0 1 0 5.113280814904505
+  hidden linearVelocity_1 0.0043638921858310045 0.0019087712392216877 -7.136293946539098e-05
+  hidden angularVelocity_1 -0.1471966782660541 0.21856889576791438 0.020754858690186673
+  hidden rotation_2 0 -1 0 0.25747262958250755
+  hidden linearVelocity_2 -0.00410732914754109 -0.0022763135148977792 -7.1306412734983e-05
+  hidden angularVelocity_2 0.16465744566460305 -0.2057517846383896 0.019816637773912404
+  translation 0.46259368952707763 -0.4625413122352111 -5.597220484273094e-05
+  rotation -0.0011598295066820973 0.000596577140904457 -0.9999991494452536 -2.2043108262337086
+  controller "controller_tut4_ej"
+}
+WoodenBox {
+  translation -0.0705999 -0.16721 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.290556 0.112473 0.05
+  name "wooden box(5)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.274327 -0.171139 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.14013 -0.170862 0.05
+  size 0.1 0.1 0.1
+}

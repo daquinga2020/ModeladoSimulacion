@@ -1,0 +1,234 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.454279390768735 -0.45599511373615254 -0.7653095395796006 4.451007687934073
+  position -0.18802492982609342 -0.6560568383041285 0.9119019280624013
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.00384947 0.00992837 0
+}
+Robot {
+  translation -0.375 -0.375 0.0193242
+  children [
+    DEF R_SENSOR DistanceSensor {
+      translation 0.05 -0.015 0
+      rotation 0 0 1 -0.3
+      children [
+        DEF R_SENSOR Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      name "ds_right"
+      boundingObject USE R_SENSOR
+      physics Physics {
+        mass 0.01
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 28.633425181850985
+        axis 0 1 0
+        anchor 0.025 0.03 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint DEF WHEEL_1 Solid {
+        translation 0.02446959514348141 0.03168675327033948 0.00014217959734565792
+        rotation -0.1272963007196825 0.7013532403861197 -0.701355319380251 3.3948225108168564
+        children [
+          DEF WHEEL_1 Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "wheel1"
+        boundingObject USE WHEEL_1
+        physics Physics {
+          density 625
+          mass 0.5
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 11.15657725696421
+        axis 0 1 0
+        anchor 0.025 -0.03 0
+      }
+      device [
+        DEF WHEEL_2 RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint DEF WHEEL_2 Solid {
+        translation 0.024924074543725 -0.03108380123156154 -0.0001590918077057858
+        rotation 0.639221821588526 -0.5437798910494701 0.5437820270064773 2.0040742932003353
+        children [
+          DEF WHEEL_2 Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "wheel2"
+        boundingObject USE WHEEL_2
+        physics Physics {
+          mass 0.5
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 11.15658604854291
+        axis 0 1 0
+        anchor -0.025 -0.03 0
+      }
+      device [
+        DEF WHEEL_3 RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint DEF WHEEL_3 Solid {
+        translation -0.025213232086996835 -0.03170497278860416 -0.0005344022984533832
+        rotation 0.6390738941011077 -0.5440843803396368 0.5436513082379916 2.0035580716081403
+        children [
+          DEF WHEEL_3 Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "wheel3"
+        boundingObject USE WHEEL_3
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 28.633448043699975
+        axis 0 1 0
+        anchor -0.025 0.03 0
+      }
+      device [
+        DEF WHEEL_4 RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint DEF WHEEL_4 Solid {
+        translation -0.025181441022250298 0.031081749485992318 -1.737080878716151e-05
+        rotation -0.12725419309823754 0.7016373417897928 -0.7010787480341064 3.394939985533046
+        children [
+          DEF WHEEL_4 Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "wheel4"
+        boundingObject USE WHEEL_4
+        physics Physics {
+          mass 0.5
+        }
+      }
+    }
+    DEF L_SENSOR DistanceSensor {
+      translation 0.05 0.015 0
+      rotation 0 0 1 0.3
+      children [
+        DEF L_SENSOR Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      name "ds_left"
+      boundingObject USE L_SENSOR
+      physics Physics {
+        mass 0.01
+      }
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.025
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+    mass 3
+  }
+  controller "main"
+}
+Wall {
+  translation -0.152045 0.264634 1.11022e-16
+  rotation 0 0 1 -1.5707953071795862
+  name "wall(2)"
+  size 0.01 0.7 0.1
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.149275 -0.245006 4.44089e-16
+  rotation 0 0 1 -1.5707953071795862
+  name "wall(1)"
+  size 0.01 0.7 0.1
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.142399 0.011701 1.11022e-16
+  rotation 0 0 1 -1.5707953071795862
+  size 0.01 0.7 0.1
+  appearance Roughcast {
+    colorOverride 1 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
